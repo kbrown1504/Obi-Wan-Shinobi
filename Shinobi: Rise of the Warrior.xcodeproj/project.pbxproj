@@ -8,26 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		D53635C822A02062004AAE60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53635C722A02062004AAE60 /* AppDelegate.swift */; };
-		D53635CA22A02062004AAE60 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D53635C922A02062004AAE60 /* GameScene.sks */; };
-		D53635CC22A02062004AAE60 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = D53635CB22A02062004AAE60 /* Actions.sks */; };
 		D53635CE22A02062004AAE60 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53635CD22A02062004AAE60 /* GameScene.swift */; };
 		D53635D022A02062004AAE60 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53635CF22A02062004AAE60 /* GameViewController.swift */; };
 		D53635D322A02062004AAE60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D53635D122A02062004AAE60 /* Main.storyboard */; };
 		D53635D522A02067004AAE60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D53635D422A02067004AAE60 /* Assets.xcassets */; };
 		D53635D822A02067004AAE60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D53635D622A02067004AAE60 /* LaunchScreen.storyboard */; };
+		D53635E022A02912004AAE60 /* gameMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D53635DF22A02912004AAE60 /* gameMusic.mp3 */; };
+		D53635E322A02926004AAE60 /* pew.wav in Resources */ = {isa = PBXBuildFile; fileRef = D53635E122A02926004AAE60 /* pew.wav */; };
+		D53635E422A02926004AAE60 /* VectorMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53635E222A02926004AAE60 /* VectorMath.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D53635C422A02062004AAE60 /* Shinobi: Rise of the Warrior.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shinobi: Rise of the Warrior.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D53635C722A02062004AAE60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D53635C922A02062004AAE60 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		D53635CB22A02062004AAE60 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		D53635CD22A02062004AAE60 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		D53635CF22A02062004AAE60 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		D53635D222A02062004AAE60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D53635D422A02067004AAE60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D53635D722A02067004AAE60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D53635D922A02067004AAE60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D53635DF22A02912004AAE60 /* gameMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameMusic.mp3; sourceTree = "<group>"; };
+		D53635E122A02926004AAE60 /* pew.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pew.wav; sourceTree = "<group>"; };
+		D53635E222A02926004AAE60 /* VectorMath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorMath.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,16 +63,25 @@
 			isa = PBXGroup;
 			children = (
 				D53635C722A02062004AAE60 /* AppDelegate.swift */,
-				D53635C922A02062004AAE60 /* GameScene.sks */,
-				D53635CB22A02062004AAE60 /* Actions.sks */,
 				D53635CD22A02062004AAE60 /* GameScene.swift */,
 				D53635CF22A02062004AAE60 /* GameViewController.swift */,
 				D53635D122A02062004AAE60 /* Main.storyboard */,
 				D53635D422A02067004AAE60 /* Assets.xcassets */,
 				D53635D622A02067004AAE60 /* LaunchScreen.storyboard */,
 				D53635D922A02067004AAE60 /* Info.plist */,
+				D53635E522A02936004AAE60 /* Sounds */,
+				D53635E222A02926004AAE60 /* VectorMath.swift */,
 			);
 			path = "Shinobi: Rise of the Warrior";
+			sourceTree = "<group>";
+		};
+		D53635E522A02936004AAE60 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				D53635DF22A02912004AAE60 /* gameMusic.mp3 */,
+				D53635E122A02926004AAE60 /* pew.wav */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,11 +142,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D53635E322A02926004AAE60 /* pew.wav in Resources */,
 				D53635D322A02062004AAE60 /* Main.storyboard in Resources */,
-				D53635CA22A02062004AAE60 /* GameScene.sks in Resources */,
 				D53635D522A02067004AAE60 /* Assets.xcassets in Resources */,
+				D53635E022A02912004AAE60 /* gameMusic.mp3 in Resources */,
 				D53635D822A02067004AAE60 /* LaunchScreen.storyboard in Resources */,
-				D53635CC22A02062004AAE60 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D53635E422A02926004AAE60 /* VectorMath.swift in Sources */,
 				D53635CE22A02062004AAE60 /* GameScene.swift in Sources */,
 				D53635D022A02062004AAE60 /* GameViewController.swift in Sources */,
 				D53635C822A02062004AAE60 /* AppDelegate.swift in Sources */,

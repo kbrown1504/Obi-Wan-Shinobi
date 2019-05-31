@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina6_1" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,63 @@
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="Shinobi__Rise_of_the_Warrior" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ninjaDojo" translatesAutoresizingMaskIntoConstraints="NO" id="3dB-6P-1ux">
+                                <rect key="frame" x="44" y="0.0" width="808" height="414"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="LKS-Wv-5eS">
+                                <rect key="frame" x="246" y="347" width="410" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dc4-yU-opo">
+                                        <rect key="frame" x="0.0" y="0.0" width="106" height="30"/>
+                                        <state key="normal" title="Start Level One"/>
+                                        <connections>
+                                            <action selector="onLevelOnePressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="fJ8-Kr-vf2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d08-wi-S5D">
+                                        <rect key="frame" x="146" y="0.0" width="106" height="30"/>
+                                        <state key="normal" title="Start Level Two"/>
+                                        <connections>
+                                            <action selector="onLevelTwoPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="Xj0-kb-oq2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2W-Uu-ra6">
+                                        <rect key="frame" x="292" y="0.0" width="118" height="30"/>
+                                        <state key="normal" title="Start Level Three"/>
+                                        <connections>
+                                            <action selector="onLevelThreePressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="pws-Jw-OAZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3dB-6P-1ux" firstAttribute="trailing" secondItem="4qk-I5-YsI" secondAttribute="trailing" id="3aA-SM-NNf"/>
+                            <constraint firstAttribute="bottom" secondItem="3dB-6P-1ux" secondAttribute="bottom" id="QB2-Rs-qIV"/>
+                            <constraint firstItem="3dB-6P-1ux" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" id="RLB-ah-9jY"/>
+                            <constraint firstItem="3dB-6P-1ux" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" id="qWO-di-Yqg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                     </view>
+                    <connections>
+                        <outlet property="buttonStackView" destination="LKS-Wv-5eS" id="1XI-H1-zhM"/>
+                        <outlet property="imageView" destination="3dB-6P-1ux" id="LbL-WY-XKm"/>
+                        <outlet property="view" destination="3se-qz-xqx" id="smT-Xn-EjU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138.61607142857142" y="92.753623188405811"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ninjaDojo" width="960" height="720"/>
+    </resources>
 </document>
